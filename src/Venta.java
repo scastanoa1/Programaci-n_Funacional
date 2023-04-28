@@ -6,7 +6,7 @@ public class Venta {
     int quantityOrdered;
     double priceEach;
     String orderLineNumber;
-    String sales;
+    double sales;
     String orderDate;
     String status;
     String qtrId;
@@ -19,7 +19,7 @@ public class Venta {
     String phone;
     String addressLine1;
     String addressLine2;
-    String city;
+    String city;// <---
     String street;
     String postalCode;
     String country;
@@ -30,7 +30,7 @@ public class Venta {
     int xd;
 
     //Constructor
-    public Venta(String orderNumber, int quantityOrdered, Double priceEach, String orderLineNumber, String sales,
+    public Venta(String orderNumber, int quantityOrdered, double priceEach, String orderLineNumber,double sales,
                  String orderDate, String status, String qtrId, String monthId, String yearId, String productLine,
                  String msrp, String productCode, String customerName, String phone, String addressLine1,
                  String addressLine2, String city, String street, String postalCode, String country,
@@ -95,11 +95,11 @@ public class Venta {
         this.orderLineNumber = orderLineNumber;
     }
 
-    public String getSales() {    //2871
+    public double getSales() {    //2871
         return sales;
     }
 
-    public void setSales(String sales) {
+    public void setSales(double sales) {
         this.sales = sales;
     }
 

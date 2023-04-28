@@ -1,16 +1,9 @@
 import java.util.*;
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-        Scanner scan;
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
-    }
+    static DataProcessing byCity = city ->{
+        city.stream().filter(c-> c.getCity().equals("NYC")).forEach(System.out::println);
+        return city.stream().filter(c-> c.getCity().equals("NYC")) ;};
+    //static DataProcessing sales = sale -> {
+       // sale.stream().map(Venta::getSales).sum();
+    //}
 }
