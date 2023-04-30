@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public interface DataProduct {
+import java.util.List;
+import java.util.stream.Stream;
+public interface DataProduct {
+    double product(Stream<Venta> s,String p);
 }

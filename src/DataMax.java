@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class DataMax {
+import java.util.stream.Stream;
+public interface DataMax {
+    String customers(Stream<Venta> m);
+
 }
