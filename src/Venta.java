@@ -1,7 +1,4 @@
 public class Venta {
-    static int x;
-    //ORDERNUMBER,QUANTITYORDERED,PRICEEACH,ORDERLINENUMBER,SALES,ORDERDATE,STATUS,QTR_ID,MONTH_ID,YEAR_ID,PRODUCTLINE,MSRP,PRODUCTCODE,CUSTOMERNAME,PHONE,ADDRESSLINE1,ADDRESSLINE2,CITY,STATE,POSTALCODE,COUNTRY,TERRITORY,CONTACTLASTNAME,CONTACTFIRSTNAME,DEALSIZE
-    //10107,30,95.7,2,2871,2/24/2003 0:00,Shipped,1,2,2003,Motorcycles,95,S10_1678,Land of Toys Inc.,2125557818,897 Long Airport Avenue,,NYC,NY,10022,USA,NA,Yu,Kwai,Smallint orderNumber;
     String orderNumber;
     int quantityOrdered;
     double priceEach;
@@ -27,7 +24,6 @@ public class Venta {
     String contactLastName;
     String contactFirstName;
     String dealSize;
-    int xd;
 
     //Constructor
     public Venta(String orderNumber, int quantityOrdered, double priceEach, String orderLineNumber,double sales,
@@ -60,8 +56,6 @@ public class Venta {
         this.orderNumber = orderNumber;
         this.quantityOrdered = quantityOrdered;
         this.priceEach = priceEach;
-        x++;
-        xd = x;
     }
     public String getOrderNumber() {    //10107
         return orderNumber;
@@ -263,15 +257,14 @@ public class Venta {
         this.dealSize = dealSize;
     }
 
-
     @Override
     public String toString() {
-        return xd+"Venta{" +
+        return "Venta {" +
                 "orderNumber='" + orderNumber + '\'' +
                 ", quantityOrdered=" + quantityOrdered +
                 ", priceEach=" + priceEach +
                 ", orderLineNumber='" + orderLineNumber + '\'' +
-                ", sales='" + sales + '\'' +
+                ", sales=" + sales +
                 ", orderDate='" + orderDate + '\'' +
                 ", status='" + status + '\'' +
                 ", qtrId='" + qtrId + '\'' +
@@ -292,6 +285,17 @@ public class Venta {
                 ", contactLastName='" + contactLastName + '\'' +
                 ", contactFirstName='" + contactFirstName + '\'' +
                 ", dealSize='" + dealSize + '\'' +
-                '}';
+                '}' + "\n------------------------------------\n";
     }
+
+/*@Override
+    public String toString() {
+        return "Venta {" +
+                "Customer name= "+ customerName + '\''+
+                ", quantityOrdered=" + quantityOrdered + '\''+
+                ", sales='" + sales + '\'' +
+                ", productLine='" + productLine + '\'' +
+                ", city='" + city +
+                "}";
+    }*/
 }
